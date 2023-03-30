@@ -54,19 +54,50 @@ func main() {
 	//toHere:
 	//	fmt.Println("ok")
 
-	for i := 1; i < 10; i++ {
-		for j := 1; j <= i; j++ {
-			fmt.Printf("%d * %d = %d ", i, j, i*j)
-		}
-		fmt.Println()
+	//for i := 1; i < 10; i++ {
+	//	for j := 1; j <= i; j++ {
+	//		fmt.Printf("%d * %d = %d ", i, j, i*j)
+	//	}
+	//	fmt.Println()
+	//}
+	//
+	//m := map[string]int{
+	//	"xyx": 1,
+	//}
+	//for key, val := range m {
+	//	fmt.Println(val)
+	//	m[key] = 2
+	//}
+	//fmt.Println(m["xyx"])
+
+	//var grade string = "B"
+	//var score int = 90
+	//
+	//switch score {
+	//case 90:
+	//	grade = "A"
+	//case 80:
+	//	grade = "B"
+	//default:
+	//	grade = "C"
+	//}
+	//
+	//switch {
+	//case grade == "A":
+	//	fmt.Printf("优秀\n")
+	//case grade == "B", grade == "C":
+	//	fmt.Printf("一般\n")
+	//}
+
+	// fallthrough自动向下
+	var s string = "1"
+
+	switch {
+	case s == "1":
+		fmt.Printf("1")
+		fallthrough
+	case s == "2":
+		fmt.Printf("2")
 	}
 
-	m := map[string]int{
-		"xyx": 1,
-	}
-	for key, val := range m {
-		fmt.Println(val)
-		m[key] = 2
-	}
-	fmt.Println(m["xyx"])
 }
